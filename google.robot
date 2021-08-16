@@ -1,6 +1,7 @@
 ***Settings***
 Library  SeleniumLibrary
-# Test Teardown  Close Browser
+Library  String
+Test Teardown  Close Browser
 
 ***Variables***
 ${URL}  https://www.google.com/
@@ -18,6 +19,20 @@ Case 01
     ตรวจสอบผลการค้นหา
 
 ***Keywords***
+ตรวจสอบผลการค้นหา
+	Wait Until Element Is Enabled  id=result-stats
+	${result}=  Get Text   id=result-stats
+	Log to console   ${result}
+	Should Start With   ${result}   ผลการค้นหาประมาณ
+	Should End With   ${result}  )${SPACE}
+	
+	${stripped}=  Strip String	 ${result}	
+	Should End With   ${stripped}  )
+    # Wait Until Element Contains  id=result-stats  ผลการค้นหาประมาณ
+    # Element Should Contain  id=result-stats  รายการ
+	# Element Should Contain  id=result-stats  (
+	# Element Should Contain  id=result-stats  )
+
 Go to Google
     Open Browser  ${URL}  browser=${BROWSER}
 
@@ -26,13 +41,5 @@ Go to Google
     Input Text  name:q  popcat
     Press Keys  None  ENTER
 
-ตรวจสอบผลการค้นหา
-	Wait Until Element Is Enabled  id=result-stats
-	${result}=  Get Text   id=result-stats
-	Log to console   ${result}
-	Should Start With   ${result}   ผลการค้นหาประมาณ
-    # Wait Until Element Contains  id=result-stats  ผลการค้นหาประมาณ
-    # Element Should Contain  id=result-stats  รายการ
-	# Element Should Contain  id=result-stats  (
-	# Element Should Contain  id=result-stats  )
+
 
