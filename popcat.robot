@@ -18,7 +18,7 @@ Case 01
 
 Start game
     Open Browser   ${URL}    browser=${BROWSER}
-	Maximize Browser Window
+	# Maximize Browser Window
 
 ตรวจสอบผลของการนับ pop
 	Wait Until Element Contains  xpath://*[@id="app"]/div/div  1

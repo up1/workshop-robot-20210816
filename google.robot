@@ -1,13 +1,18 @@
 ***Settings***
 Library  SeleniumLibrary
-Test Teardown  Close Browser
+# Test Teardown  Close Browser
 
 ***Variables***
 ${URL}  https://www.google.com/
 ${BROWSER}  gc
 
 ***Test Cases***
+Testing
+	[Tags]  poc
+	Should Start With   somkiat   som1
+
 Case 01
+	[Tags]  testing
     Go to Google
     ค้นหา popcat
     ตรวจสอบผลการค้นหา
@@ -22,5 +27,12 @@ Go to Google
     Press Keys  None  ENTER
 
 ตรวจสอบผลการค้นหา
-    Wait Until Element Contains  id=result-stats  ผลการค้นหาประมาณ
-    Element Should Contain  id=result-stats  รายการ
+	Wait Until Element Is Enabled  id=result-stats
+	${result}=  Get Text   id=result-stats
+	Log to console   ${result}
+	Should Start With   ${result}   ผลการค้นหาประมาณ
+    # Wait Until Element Contains  id=result-stats  ผลการค้นหาประมาณ
+    # Element Should Contain  id=result-stats  รายการ
+	# Element Should Contain  id=result-stats  (
+	# Element Should Contain  id=result-stats  )
+
