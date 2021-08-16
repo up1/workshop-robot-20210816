@@ -3,7 +3,8 @@ Library  SeleniumLibrary
 Test Teardown   Close Browser
 
 *** Variables ***
-
+${URL}  https://popcat.click
+${BROWSER}  chrome
 
 *** Test Cases ***
 Case 01
@@ -16,7 +17,7 @@ Case 01
 	Press Keys	 None	x
 
 Start game
-    Open Browser   https://popcat.click   browser=chrome
+    Open Browser   ${URL}    browser=${BROWSER}
 	Maximize Browser Window
 
 ตรวจสอบผลของการนับ pop
