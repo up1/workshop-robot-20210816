@@ -27,6 +27,11 @@ Case 01
     ตรวจสอบผลการค้นหา
 
 ***Keywords***
+ค้นหา popcat
+    Wait Until Element Is Enabled  name:q  timeout=5s
+    Input Text  name:q  popcat
+    Press Keys  None  ENTER
+
 ตรวจสอบผลการค้นหา
 	Wait Until Element Is Enabled  id=result-stats
 	${result}=  Get Text   id=result-stats
@@ -47,10 +52,6 @@ Case 01
 Go to Google
     Open Browser  ${URL}  browser=${BROWSER}
 
-ค้นหา popcat
-    Wait Until Element Is Enabled  name:q  timeout=5s
-    Input Text  name:q  popcat
-    Press Keys  None  ENTER
 
 
 
