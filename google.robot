@@ -12,6 +12,14 @@ Testing
 	[Tags]  poc
 	Should Start With   somkiat   som1
 
+Testing with Split String
+	[Tags]  solution2
+	@{words}=  Split String  ผลการค้นหาประมาณ 2,870,000 รายการ (0.41 วินาที)  ${SPACE}  3
+	Should Be Equal   ผลการค้นหาประมาณ   ${words}[0]
+	Should Be Equal   2,870,000   ${words}[1]
+	Should Be Equal   รายการ   ${words}[2]
+	Should Be Equal   (0.41 วินาที)   ${words}[3]
+
 Case 01
 	[Tags]  testing
     Go to Google
