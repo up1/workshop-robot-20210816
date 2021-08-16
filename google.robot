@@ -36,10 +36,13 @@ Case 01
 	
 	${stripped}=  Strip String	 ${result}	
 	Should End With   ${stripped}  )
-    # Wait Until Element Contains  id=result-stats  ผลการค้นหาประมาณ
-    # Element Should Contain  id=result-stats  รายการ
-	# Element Should Contain  id=result-stats  (
-	# Element Should Contain  id=result-stats  )
+    
+	@{words}=  Split String  ${stripped}  ${SPACE}  3
+	Should Be Equal   ผลการค้นหาประมาณ   ${words}[0]
+	# Should Be Equal   2,870,000   ${words}[1]
+	Should Be Equal   รายการ   ${words}[2]
+	Should Start With   ${words}[3]   (
+	Should End With   ${words}[3]  )
 
 Go to Google
     Open Browser  ${URL}  browser=${BROWSER}
