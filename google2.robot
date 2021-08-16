@@ -18,6 +18,11 @@ Case 02
     ค้นหา "robotframework" นะ
     ตรวจสอบผลการค้นหา
 
+Case 03
+    Go to Google
+    ค้นหา "xyz" นะ
+    ตรวจสอบผลการค้นหา
+
 ***Keywords***
 # Embedded arguments in keywords
 ค้นหา "${keyword}" นะ   
