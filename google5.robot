@@ -9,8 +9,3 @@ Suite Teardown   Close Browser
 	popcat           ผลการค้นหาประมาณ
 	robotframework   ผลการค้นหาประมาณ
 	xyz              ผลการค้นหาประมาณ
-
-
-
-
-
