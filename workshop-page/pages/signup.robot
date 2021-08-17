@@ -1,4 +1,7 @@
 *** Keywords ***
+เปิด
+	Go to  https://www.kimschiller.com/page-object-pattern-tutorial/
+
 กรอกข้อมูล
 	[Arguments]  ${firstname}  ${lastname}  ${address}  ${zipcode}
 	Input Text   id:firstname   ${firstname}
