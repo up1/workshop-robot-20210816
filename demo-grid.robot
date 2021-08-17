@@ -6,4 +6,4 @@ Test Teardown   Close Browser
 Demo
 	Open Browser   http://www.google.com   chrome
     ...   remote_url=http://188.166.215.46:4444/wd/hub
-	Input Text  name:q   try234
+	Input Text  name:q   try
