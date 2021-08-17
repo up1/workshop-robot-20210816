@@ -5,10 +5,6 @@ Suite Teardown   Close Browser
 Test Teardown    กลับไปยังหน้าแรก
 Test Template    Search data from google flow
 
-***Variables***
-${URL}  https://www.google.com/
-${BROWSER}  gc
-
 ***Test Cases***
 # Name   | Input          |  Expected result
 Case 01    popcat           ผลการค้นหาประมาณ

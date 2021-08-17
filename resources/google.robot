@@ -2,6 +2,10 @@
 Library          SeleniumLibrary
 Library          String
 
+***Variables***
+${URL}  https://www.google.com/
+${BROWSER}  gc
+
 ***Keywords***
 Search data from google flow
 	[Arguments]  ${keyword}  ${expected result}
