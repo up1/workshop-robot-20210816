@@ -1,6 +1,4 @@
 ***Settings***
-Library          SeleniumLibrary
-Library          String
 Resource		 resources/google.robot
 Suite Setup      Go to Google
 Suite Teardown   Close Browser

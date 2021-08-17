@@ -1,3 +1,7 @@
+***Settings***
+Library          SeleniumLibrary
+Library          String
+
 ***Keywords***
 Search data from google flow
 	[Arguments]  ${keyword}  ${expected result}
